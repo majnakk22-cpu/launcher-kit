@@ -1,0 +1,8 @@
+{
+  "version": "0.2.0",
+  "notes": "Новый менеджер загрузок и конфиги по умолчанию",
+  "page": "https://github.com/USER/REPO/releases/latest",
+  "windows": { "url": "https://github.com/USER/REPO/releases/download/v0.2.0/mc-launcher-kit-Setup-0.2.0.exe" },
+  "linux": { "url": "https://github.com/USER/REPO/releases/download/v0.2.0/mc-launcher-kit-0.2.0-linux-x86_64.AppImage" },
+  "mac": { "url": "https://github.com/USER/REPO/releases/download/v0.2.0/mc-launcher-kit-0.2.0-mac-arm64.dmg" }
+}

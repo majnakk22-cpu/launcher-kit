@@ -1,0 +1,50 @@
+{
+  "$comment": "Главный файл кастомизации. Скопируй проект, поменяй этот файл и стили — получишь свой лаунчер. Описание всех полей в README.md",
+  "id": "mc-launcher-kit",
+  "name": "Launcher Kit",
+  "dataDirName": ".mc-launcher-kit",
+  "launcherBrand": "mc-launcher-kit",
+  "theme": {
+    "accent": "#4ade80",
+    "accentText": "#062b14",
+    "bg": "#0f1115",
+    "panel": "#161a21",
+    "panel2": "#1d222b",
+    "text": "#e7eaf0",
+    "muted": "#8a93a3",
+    "radius": "12px",
+    "background": ""
+  },
+  "microsoft": {
+    "clientId": "YOUR_AZURE_CLIENT_ID"
+  },
+  "curseforge": {
+    "apiKey": ""
+  },
+  "content": {
+    "modrinth": true,
+    "curseforge": true
+  },
+  "features": {
+    "customInstances": true,
+    "offlineAccounts": true,
+    "microsoftAccounts": true,
+    "catalog": true,
+    "console": true
+  },
+  "presets": [],
+  "news": {
+    "url": ""
+  },
+  "links": [],
+  "defaults": {
+    "$comment": "Стартовые «конфиги по умолчанию» для новых игроков (потом каждый меняет их у себя во вкладке «Конфиги»)",
+    "options": {},
+    "servers": []
+  },
+  "updates": {
+    "$comment": "Ссылка на JSON с последней версией лаунчера — см. README, раздел «Автообновление»",
+    "url": ""
+  },
+  "mirrors": {}
+}

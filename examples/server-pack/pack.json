@@ -1,0 +1,14 @@
+{
+  "id": "my-server",
+  "name": "Мой сервер",
+  "version": "1.0.0",
+  "changelog": "Первая версия сборки",
+  "minecraft": "1.20.1",
+  "loader": { "type": "forge", "version": "47.3.0" },
+  "java": { "minMemory": 2048, "maxMemory": 6144 },
+  "server": { "address": "play.example.com", "port": 25565, "autoConnect": true },
+  "managedDirs": ["mods"],
+  "keep": ["mods/optifine*.jar"],
+  "once": ["options.txt", "servers.dat"],
+  "ignore": ["**/*.bak"]
+}

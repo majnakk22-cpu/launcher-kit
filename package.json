@@ -1,0 +1,91 @@
+{
+  "name": "mc-launcher-kit",
+  "productName": "Launcher Kit",
+  "version": "0.1.0",
+  "description": "Каркас Minecraft-лаунчера на Electron: Vanilla/Forge/NeoForge/Fabric/Quilt, Microsoft и офлайн вход, Modrinth и CurseForge, синхронизация сборки с сервером",
+  "main": "src/main/main.js",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --dev",
+    "test": "node --test \"tests/*.test.js\"",
+    "cli": "node tools/cli.js",
+    "manifest": "node tools/build-manifest.js",
+    "dist": "electron-builder --publish never",
+    "dist:win": "electron-builder --win --publish never",
+    "dist:linux": "electron-builder --linux --publish never",
+    "dist:mac": "electron-builder --mac --publish never",
+    "dist:dir": "electron-builder --dir --publish never"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "electron": "^38.0.0",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "com.example.mclauncherkit",
+    "productName": "Launcher Kit",
+    "copyright": "© 2026",
+    "directories": {
+      "output": "dist",
+      "buildResources": "build"
+    },
+    "files": [
+      "src/**/*",
+      "launcher.config.json",
+      "package.json",
+      "build/icon.png"
+    ],
+    "asar": true,
+    "artifactName": "${name}-${version}-${os}-${arch}.${ext}",
+    "win": {
+      "icon": "build/icon.ico",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowElevation": true,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "runAfterFinish": true,
+      "deleteAppDataOnUninstall": false,
+      "language": "1049",
+      "artifactName": "${name}-Setup-${version}.${ext}"
+    },
+    "portable": {
+      "artifactName": "${name}-Portable-${version}.${ext}"
+    },
+    "linux": {
+      "icon": "build/icon.png",
+      "target": [
+        "AppImage"
+      ],
+      "category": "Game"
+    },
+    "mac": {
+      "icon": "build/icon.png",
+      "target": [
+        "dmg"
+      ],
+      "category": "public.app-category.games"
+    }
+  }
+}
